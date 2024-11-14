@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use align-items and align-content Together</title>
+</head>
+<body>
+    <style>
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            gap: 5px;
+            align-items: flex-start;
+            align-content: center;
+        }
+        .flex-container>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            width: 150px;
+        }
+        .flex-child-1{
+            background-color: #33b5ff;
+        }
+        .flex-child-2{
+            background-color: #33ff88;
+        }
+        .flex-child-3{
+            background-color: #ff33cc;
+        }
+        .flex-child-4{
+            background-color: #ff5733;
+        }
+        .flex-child-5{
+            background-color: #ffaa33;
+        }
+            
+    </style>
+
+    <div class="flex-container">
+        <div class="flex-child-1">Child 1</div>
+        <div class="flex-child-2">Child 2</div>
+        <div class="flex-child-3">Child 3</div>
+        <div class="flex-child-4">Child 4</div>
+        <div class="flex-child-5">Child 5</div>
+      </div>
+     
+</body>
+</html>
+
+<!-- Objective: Understand the interaction between align-items (applies to flex children) and align-content (applies to the entire flex container).
+ - Create a div container with five child div elements.
+  - Apply different values for align-items (e.g., flex-start, center, stretch) to the container. 
+  - Experiment with align-content (e.g., space-between, center) to see how the entire group of children
+   is aligned within the container, especially when the container height is greater than needed for the children. -->
